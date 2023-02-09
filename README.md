@@ -1,6 +1,6 @@
 # Walden Point HOA Website
 
-This is the source code for the website running at <http://waldenpoint.org>.
+This is the source code for the website running at <http://www.waldenpoint.org>.
 
 # Developer Notes
 
