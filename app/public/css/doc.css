@@ -1,0 +1,146 @@
+:root {
+  --font: "Times New Roman";
+}
+
+html {
+    font-family: var(--font);
+    font-optical-sizing: auto;
+    font-size: 14pt;
+}
+
+pre {
+    font-family: var(--font);
+}
+
+body {
+    margin: 0px;
+}
+
+
+@media screen {
+    body {
+        /* Don't let text get too wide */
+        max-width: 800px;
+        /* Have some space from the page border */
+        padding-left: 2em;
+        margin: 0 auto;
+    }
+    a {
+        color:#00F;
+        text-decoration: none;
+    }
+    .typo {
+        font-style: italic;
+    }
+    ins {
+        text-decoration: none;
+        background-color: #d4fcbc;
+    }
+}
+
+@media print {
+    @page {
+        margin: 1in;
+
+        @bottom-left {
+            content: string(title);
+            font-style: italic;
+            color:#888;
+        }
+
+        @bottom-right {
+            content: counter(page);
+            font-style: italic;
+            color:#888;
+        }
+    }
+
+    h2 {
+        break-before: always;
+    }
+
+    dfn {
+        font-style:normal;
+    }
+
+    a {
+        color:#000;
+        text-decoration: none;
+    }
+
+    ins {
+        text-decoration: none;
+    }
+}
+
+h2 {
+    string-set: title content(text);
+
+}
+
+p {
+    page-break-inside: avoid;
+}
+
+li {
+    page-break-inside: avoid;
+}
+
+h1 {
+    font-size:1.1em;
+    font-weight: bold;
+    text-align: center;
+    margin: 2em;
+    line-height: 2em;
+}
+
+h2 {
+    font-size:1.0em;
+    font-weight: bold;
+    text-align: center;
+    margin: 2em;
+    line-height: 1.2em;
+}
+
+
+.fixed {
+    font-family: Consolas, Courier;
+    font-size: smaller;
+}
+.tab {
+    padding-left: 4em;
+}
+
+ol {
+    padding-left: 4em;
+    /* This enables margin for ol inside li */
+    margin-top: 1em;
+}
+
+ol.letters {
+    counter-reset: letter;
+}
+
+ol.letters > li {
+    list-style: none;
+    counter-increment: letter;
+    margin-bottom: 1em;
+}
+ol.letters > li::marker {
+    content: "(" counter(letter, lower-alpha) ") ";
+    counter-increment: letter;
+}
+
+ol.numbers {
+    counter-reset: number;
+}
+
+ol.numbers > li {
+    list-style: none;
+    counter-increment: number;
+    margin-bottom: 1em;
+}
+ol.numbers > li::marker {
+    content: "(" counter(number) ") ";
+    counter-increment: number;
+}

@@ -1,17 +1,29 @@
-<!doctype html>
-<html lang="en">
+{% extends "layout.html" %}
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+{% block content %}
+    <h1>Walden Point HOA</h1>
 
-    <title></title>
-    <link rel="stylesheet" href="/css/main.css">
-</head>
+    <h2>Documents</h2>
 
-<body>
-    Hello
-</body>
+    The following documents have been converted to HTML for reference.  These documents may contain typos and are not binding.
 
-</html>
+    <ul>
+        <li>
+            <a href="doc/dccr">Declaration of covenants, conditions and restrictions (DCCR)</a>
+            <ul>
+                <li><a href="doc/dccr-a1">Amendment #1</a> (Optional membership in Sierra Heights HOA)</li>
+            </ul>
+        </li>
+        <li>
+            <a href="doc/by-laws">By-Laws</a>
+        </li>
+        <li>
+            <a href="doc/aoi">Articles of Incorporation</a>
+            <ul>
+                <li>
+                    <a href="doc/aoc">Articles of Correction</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+{% endblock %}
