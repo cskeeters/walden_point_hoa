@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="section light">
+        <main>
+            <h1>Members</h1>
+
+            <p>
+                The current members are shown here by Lot number.  If you want to modify this contact information, please contact Chad.
+            </p>
+
+            <div class="members cards double">
+                {%~ for lot in lots %}
+                <div class="card">
+                    <h3 class="lot">Lot {{loop.index}}</h3>
+                    {%~ for name in lot %}
+                        <div class="name">{{name['first']}} {{name['last']}}</div>
+                        {%~ if name['email'] %}
+                            <a class="email" href="mailto:'{{name['first']}} {{name['last']}}' <{{name['email']}}>?subject=Walden Point">{{name['email']}}</a>
+                        {%~ endif %}
+                        {%~ if name['tel'] %}
+                            <a class="tel" href="tel:{{name['tel']}}">{{name['tel']}}</a>
+                        {%~ endif %}
+                    {%~ endfor %}
+                </div>
+                {%~ endfor %}
+            </div>
+        </main>
+    </div>
+
+    <div class="section white">
+        <main>
+            <h1>General Ledger / Reports</h1>
+            <p>
+                The current Treasurer is keeping books using accrual, double-entry accounting. The following were updated 2023-Feb-12:
+
+                <ul>
+                    <li><a href="beans/view/year/2023/balsheet.html">Balance Sheet</a></li>
+                    <li><a href="beans/view/year/2023/income.html">Income Statement</a></li>
+                    <li><a href="ledger">General Ledger</a></li>
+                </ul>
+            </p>
+
+            <p>
+                When reviewing the reports, keep in mind that the <i>Equity</i> in the HOA will be negative, as our HOA is solvent (that'd good).  Also the <i>Income </i> shows negative, but this is just an artifact of the <a href="https://beancount.github.io/docs/the_double_entry_counting_method.html#accounting-equations">accounting equation</a> used:
+
+
+            </p>
+            <pre><code>Assets + Liabilities + Expenses + Equity + Income = 0</code></pre>
+            <ul>
+                <li>An <i>asset</i> will be <b>positive</b> when the asset is worth something</li>
+                <li>An <i>expense</i> will be <b>positive</b> when a cost is incurred</li>
+                <li>A <i>liability</i> will be <b>negative</b> when the HOA owes someone</li>
+                <li><i>Income</i> will be negative when someone owes the HOA money</li>
+                <li><i>Equity</i> will be negative when the HOA is solvent</li>
+            </ul>
+
+            <p>
+                The general ledger is mained by the Treasurer using <a href="https://plaintextaccounting.org/">plain-text accounting</a>, namely <a href="https://beancount.github.io/docs/index.html">beancount</a>.
+            </p>
+        </main>
+    </div>
+
+{% endblock %}

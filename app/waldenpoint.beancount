@@ -1,0 +1,151 @@
+;; -*- mode: beancount; coding: utf-8; fill-column: 400; -*-
+option "title" "Walden Point Ledger"
+option "operating_currency" "USD"
+
+2023-01-01 open Equity:OpeningBalances
+2023-01-01 open Income:PreviousBoard
+
+2023-01-01 open Assets:AccountsReceivable:Lot01
+2023-01-01 open Assets:AccountsReceivable:Lot02
+2023-01-01 open Assets:AccountsReceivable:Lot03
+2023-01-01 open Assets:AccountsReceivable:Lot04
+2023-01-01 open Assets:AccountsReceivable:Lot05
+2023-01-01 open Assets:AccountsReceivable:Lot06
+2023-01-01 open Assets:AccountsReceivable:Lot07
+2023-01-01 open Assets:AccountsReceivable:Lot08
+2023-01-01 open Assets:AccountsReceivable:Lot09
+2023-01-01 open Assets:AccountsReceivable:Lot10
+2023-01-01 open Assets:AccountsReceivable:Lot11
+2023-01-01 open Assets:AccountsReceivable:Lot12
+2023-01-01 open Assets:AccountsReceivable:Lot13
+
+2023-01-01 open Assets:CashiersCheck
+2023-01-01 open Assets:WellsFargo:Checking
+
+2023-01-01 open Liabilities:AccountsPayable:ChadSkeeters
+2023-01-01 open Liabilities:AccountsPayable:INSGROUP
+
+2023-01-01 open Income:YearlyAssessments
+2023-01-01 open Income:SpecialAssessments
+
+2023-01-01 open Expenses:Electricity
+2023-01-01 open Expenses:Insurance:DO
+2023-01-01 open Expenses:Insurance:Property
+
+2023-01-01 open Expenses:Texas
+2023-01-01 open Expenses:Bexar:Records
+2023-01-01 open Expenses:Bexar:Tax
+
+2023-01-01 open Expenses:Parking
+2023-01-01 open Expenses:Notary
+
+2023-01-01 open Expenses:Website:Domain
+
+2023-01-01 * "2023 Assessment"
+  Assets:AccountsReceivable:Lot01      387.68 USD
+  Income:YearlyAssessments
+
+2023-01-01 * "2023 Assessment"
+  Assets:AccountsReceivable:Lot02      387.68 USD
+  Income:YearlyAssessments
+
+2023-01-01 * "2023 Assessment"
+  Assets:AccountsReceivable:Lot03      387.68 USD
+  Income:YearlyAssessments
+
+2023-01-01 * "2023 Assessment"
+  Assets:AccountsReceivable:Lot04      387.68 USD
+  Income:YearlyAssessments
+
+2023-01-01 * "2023 Assessment"
+  Assets:AccountsReceivable:Lot05     387.68 USD
+  Income:YearlyAssessments
+
+2023-01-01 * "2023 Assessment"
+  Assets:AccountsReceivable:Lot06     387.68 USD
+  Income:YearlyAssessments
+
+2023-01-01 * "2023 Assessment"
+  Assets:AccountsReceivable:Lot07     387.68 USD
+  Income:YearlyAssessments
+
+2023-01-01 * "2023 Assessment"
+  Assets:AccountsReceivable:Lot08     387.68 USD
+  Income:YearlyAssessments
+
+2023-01-01 * "2023 Assessment"
+  Assets:AccountsReceivable:Lot09     387.68 USD
+  Income:YearlyAssessments
+
+2023-01-01 * "2023 Assessment"
+  Assets:AccountsReceivable:Lot10     387.68 USD
+  Income:YearlyAssessments
+
+2023-01-01 * "2023 Assessment"
+  Assets:AccountsReceivable:Lot11     387.68 USD
+  Income:YearlyAssessments
+
+2023-01-01 * "2023 Assessment"
+  Assets:AccountsReceivable:Lot12     387.68 USD
+  Income:YearlyAssessments
+
+2023-01-01 * "2023 Assessment"
+  Assets:AccountsReceivable:Lot13     387.68 USD
+  Income:YearlyAssessments
+
+2023-02-01 * "INSGROUP" "Directors’ & Officers’ Liability"
+  Liabilities:AccountsPayable:INSGROUP              -840.00 USD
+  Expenses:Insurance:DO
+
+2023-02-15 * "Balance transfer"
+  Assets:CashiersCheck                10091.91 USD
+  Equity:OpeningBalances
+
+2023-02-08 * "CPS Energy Bill for Jan and Feb"
+    Liabilities:AccountsPayable:ChadSkeeters         -69.49 USD
+    Expenses:Electricity
+
+2023-02-08 * "Namecheap - waldenpoint.org"
+    Liabilities:AccountsPayable:ChadSkeeters         -7.66 USD
+    Expenses:Website:Domain
+
+2023-02-08 * "Property Tax 2022"
+    Liabilities:AccountsPayable:ChadSkeeters         -2.53 USD
+    Expenses:Bexar:Tax
+
+2023-02-08 * "Filed Periodic Report"
+    Liabilities:AccountsPayable:ChadSkeeters         -5.00 USD
+    Expenses:Texas
+
+2023-02-08 * "SOSDirect Service Charge"
+    Liabilities:AccountsPayable:ChadSkeeters         -0.14 USD
+    Expenses:Texas
+
+2023-02-10 * "UPS Notary for Management Certificate"
+    Liabilities:AccountsPayable:ChadSkeeters         -6.00 USD
+    Expenses:Notary
+
+2023-02-10 * "Filed Management Certificate + Copy"
+    Liabilities:AccountsPayable:ChadSkeeters        -38.00 USD
+    Expenses:Bexar:Records
+
+2023-02-10 * "Large Plat Printout"
+    Liabilities:AccountsPayable:ChadSkeeters         -6.00 USD
+    Expenses:Bexar:Records
+
+2023-02-10 * "Parking South Flores Garage"
+    Liabilities:AccountsPayable:ChadSkeeters         -5.00 USD
+    Expenses:Parking
+
+2023-02-18 * "Insgroup Payment"
+    Liabilities:AccountsPayable:ChadSkeeters         -840.00 USD
+    Liabilities:AccountsPayable:INSGROUP
+
+; 2023-02-15 ! "Deposit"
+;   Assets:WellsFargo:Checking          10130.00 USD
+;   Equity:OpeningBalances
+
+
+; 2023-03-15 ! "Assessment Payment"
+;   Assets:WellsFargo:Checking          387.68 USD
+;   Assets:AccountsReceivable:Lot2

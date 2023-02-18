@@ -1,0 +1,113 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="section light">
+        <main>
+            <h1>Members</h1>
+
+            <p>
+                The current members are shown here by Lot number.  If you want to modify this contact information, please contact Chad.
+            </p>
+
+            <div class="members cards double">
+                <div class="card">
+                    <h3 class="lot">Lot 1</h3>
+                    <div class="name">Cornel Alexe</div>
+                    <div class="name">Ronela Alexe</div>
+                </div>
+                <div class="card">
+                    <h3 class="lot">Lot 2</h3>
+                    <div class="name">Alejandro B Gonzalez</div>
+                </div>
+                <div class="card">
+                    <h3 class="lot">Lot 3</h3>
+                    <div class="name">John Schrock</div>
+                    <div class="name">Frana Schrock</div>
+                    <a class="email" href="mailto:'John Schrock' <johnfschrock@gmail.com>?subject=Walden Point">johnfschrock@gmail.com</a>
+                </div>
+                <div class="card">
+                    <h3 class="lot">Lot 4</h3>
+                    <div class="name">Chad Skeeters</div>
+                    <a class="email" href="mailto:'Chad Skeeters' <chad.skeeters@gmail.com>?subject=Walden Point">chad.skeeters@gmail.com</a>
+                    <a class="tel" href="tel:210-387-0463">210-387-0463</a>
+                </div>
+                <div class="card">
+                    <h3 class="lot">Lot 5</h3>
+                    <div class="name">Sandra Garza</div>
+                </div>
+                <div class="card">
+                    <h3 class="lot">Lot 6</h3>
+                    <div class="name">Gilbert Perales</div>
+                    <div class="name">Lydia Perales</div>
+                </div>
+                <div class="card">
+                    <h3 class="lot">Lot 7</h3>
+                    <div class="name">Carlos Jauregui</div>
+                    <div class="name">Carrie Jauregui</div>
+                </div>
+                <div class="card">
+                    <h3 class="lot">Lot 8</h3>
+                    <div class="name">Edythe Voss</div>
+                </div>
+                <div class="card">
+                    <h3 class="lot">Lot 9</h3>
+                    <div class="name">Sandra Schneider-Gonzalez</div>
+                </div>
+                <div class="card">
+                    <h3 class="lot">Lot 10</h3>
+                    <div class="name">Dale Green Jr.</div>
+                    <div class="name">Paula Green</div>
+                </div>
+                <div class="card">
+                    <h3 class="lot">Lot 11</h3>
+                    <div class="name">Aaron Villareal</div>
+                    <div class="name">Yvette Villareal</div>
+                </div>
+                <div class="card">
+                    <h3 class="lot">Lot 12</h3>
+                    <div class="name">Samin Dehkharghanian</div>
+                </div>
+                <div class="card">
+                    <h3 class="lot">Lot 13</h3>
+                    <div class="name">James Syler</div>
+                    <div class="name">Elizabeth Syler</div>
+                    <a class="email" href="mailto:'James Syler' <jsyler61@gmail.com>?subject=Walden Point">jsyler61@gmail.com</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="section white">
+        <main>
+            <h1>General Ledger / Reports</h1>
+            <p>
+                The current Treasurer is keeping books using accrual, double-entry accounting. The following were updated 2023-Feb-12:
+
+                <ul>
+                    <li><a href="beans/view/year/2023/balsheet.html">Balance Sheet</a></li>
+                    <li><a href="beans/view/year/2023/income.html">Income Statement</a></li>
+                    <li><a href="ledger">General Ledger</a></li>
+                </ul>
+            </p>
+
+            <p>
+                When reviewing the reports, keep in mind that the <i>Equity</i> in the HOA will be negative, as our HOA is solvent (that'd good).  Also the <i>Income </i> shows negative, but this is just an artifact of the <a href="https://beancount.github.io/docs/the_double_entry_counting_method.html#accounting-equations">accounting equation</a> used:
+
+
+            </p>
+            <pre><code>Assets + Liabilities + Expenses + Equity + Income = 0</code></pre>
+            <ul>
+                <li>An <i>asset</i> will be <b>positive</b> when the asset is worth something</li>
+                <li>An <i>expense</i> will be <b>positive</b> when a cost is incurred</li>
+                <li>A <i>liability</i> will be <b>negative</b> when the HOA owes someone</li>
+                <li><i>Income</i> will be negative when someone owes the HOA money</li>
+                <li><i>Equity</i> will be negative when the HOA is solvent</li>
+            </ul>
+
+            <p>
+                The general ledger is mained by the Treasurer using <a href="https://plaintextaccounting.org/">plain-text accounting</a>, namely <a href="https://beancount.github.io/docs/index.html">beancount</a>.
+            </p>
+        </main>
+    </div>
+
+{% endblock %}
