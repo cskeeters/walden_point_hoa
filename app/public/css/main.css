@@ -114,6 +114,7 @@ a {
 
 main p a {
     font-weight:700;
+    text-decoration: underline;
 }
 
 .section main {
