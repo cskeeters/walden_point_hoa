@@ -113,7 +113,7 @@ a {
 }
 
 main p a {
-    font-weight:700;
+    /* font-weight:700; */
     text-decoration: underline;
 }
 
@@ -134,6 +134,7 @@ main p a {
 
 .cards .button {
     font-size: 1.4em;
+    font-weight: 700;
 }
 
 @media (min-width: 800px) {

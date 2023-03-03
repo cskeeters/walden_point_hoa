@@ -17,7 +17,6 @@ div.section h5 {
 
 a {
     color: var(--a);
-    font-weight: 700;
 }
 
 .button {
@@ -39,7 +38,6 @@ a {
 
 .card a {
     color: var(--card-a);
-    font-weight: 700;
 }
 
 
