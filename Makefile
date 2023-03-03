@@ -14,7 +14,7 @@ NET_FLAGS=--network $(NETWORK) --ip $(IP)
 .PHONY: default logs debug bash stop check bake build
 
 default:
-	$(ENGINE) run -d $(NET_FLAGS) -v $(PWD)/app:/var/www/app -v $(PWD)/logs:/var/log/app --name $(APP_NAME) $(IMAGE) serve
+	$(ENGINE) run -d $(NET_FLAGS) -v $(PWD)/app:/var/www/app -v $(PWD)/logs:/var/log/app --restart unless-stopped --name $(APP_NAME) $(IMAGE) serve
 
 logs:
 	$(ENGINE) logs $(APP_NAME)
